@@ -1,0 +1,5 @@
+$(function() {
+    observe('bind', function() {
+
+    });
+});

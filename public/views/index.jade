@@ -1,0 +1,38 @@
+doctype
+html
+    head
+        title=title
+        link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    body 
+        include ./navbar.jade
+        div.loading-page 
+            img(src="/img/loading.gif", alt="Loading image", width="50px")
+
+        div.whole-page(style="display: none")
+            div.container-fluid
+                div.row
+                    div.col-md-12(style="margin-top: 50px")
+                        section(data-route="dashboard", style="display: none")
+                            include ./dashboard.jade
+                        section(data-route="about", style="display: none")
+                            include ./about.jade
+                        section(data-route="users", style="display: none")
+                            include users
+
+        script(src="/js/socketcluster.js")
+
+        script(src="/js/libraries/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+        script(src="/js/libraries/director.min.js")
+
+        script(src="/js/templates.js")
+
+        script(src="/js/system/communication.min.js")
+        script(src="/js/system/server.js")
+        script(src="/js/system/route.js")
+
+        script(src="/js/models/about.js")
+        script(src="/js/models/dashboard.js")
+        script(src="/js/models/users.js")
+
+        script(src="/js/system/startup.js")
